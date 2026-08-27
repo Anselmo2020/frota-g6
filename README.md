@@ -1,16 +1,43 @@
-# React + Vite
+# 🚌 Sistema de Controle Operacional de Frota — Garagem G-6
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Aplicação web interativa desenvolvida em **React**, **Vite** e **Tailwind CSS** para o monitoramento diário, gestão de soltura e controle de disponibilidade de frota de transporte coletivo.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 📌 Visão Geral
 
-## React Compiler
+O sistema digitaliza o quadro operacional físico da garagem, permitindo aos apontadores e gestores de tráfego acompanhar em tempo real o status dos 50 veículos gerenciados, diagnosticar avarias e registrar serviços externos.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 📊 Regras de Frota & Dimensionamento
+* **Frota Total Gerenciada:** 50 veículos
+  * **CAIO Apache:** Prefixos `2492` a `2511` (20 veículos)
+  * **MARCOPOLO Torino:** Prefixos `2512` a `2541` (30 veículos)
+* **Regra de Disponibilidade:** Veículos que não possuem registros de oficina ou serviço externo são classificados automaticamente como **Liberados para Operação**.
 
-## Expanding the Oxlint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## ✨ Funcionalidades
+
+- **Dashboard de KPIs em Tempo Real:** Indicadores automáticos de veículos liberados, em manutenção, fora de linha e percentual de disponibilidade da frota.
+- **Gestão Rápida com 1 Clique:** Clique em qualquer prefixo para abrir o modal de atualização de status (*Liberado*, *Oficina* ou *Serviço Externo*).
+- **Classificação por Carroceria:** Visualização segmentada entre modelos CAIO e MARCOPOLO.
+- **Exportação & Impressão:** Layout com suporte a folha de estilo nativa `@media print` para geração de relatórios operacionais em PDF.
+- **Responsividade Multiplataforma:** Acesso otimizado para computadores de mesa, tablets e smartphones.
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+* **Front-end:** [React.js](https://react.dev/) + [Vite](https://vitejs.dev/)
+* **Estilização:** [Tailwind CSS](https://tailwindcss.com/)
+* **Ícones:** [Lucide React](https://lucide.dev/)
+* **Versionamento & Deploy:** Git, GitHub & Vercel
+
+---
+
+## 🚀 Como Executar Localmente
+
+1. **Clone o repositório:**
+   ```bash
+   git clone [https://github.com/SEU_USUARIO/frota-g6.git](https://github.com/SEU_USUARIO/frota-g6.git)
+   cd frota-g6
