@@ -1,11 +1,24 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { generateInitialFleet } from './data/initialFleet';
 import { Bus, Printer, RotateCcw, Wrench, Truck, CheckCircle2, Trash2 } from 'lucide-react';
 
+const FLEET_STORAGE_KEY = 'frota-g6:fleet';
+
 export default function App() {
-  const [fleet, setFleet] = useState(generateInitialFleet());
+  const [fleet, setFleet] = useState(() => {
+    try {
+      const savedFleet = window.localStorage.getItem(FLEET_STORAGE_KEY);
+      return savedFleet ? JSON.parse(savedFleet) : generateInitialFleet();
+    } catch {
+      return generateInitialFleet();
+    }
+  });
   const [selectedVehicle, setSelectedVehicle] = useState(null);
   const [date, setDate] = useState('2026-08-26');
+
+  useEffect(() => {
+    window.localStorage.setItem(FLEET_STORAGE_KEY, JSON.stringify(fleet));
+  }, [fleet]);
 
   const fleetList = Object.values(fleet);
   const liberados = fleetList.filter(v => v.status === 'LIBERADO');
