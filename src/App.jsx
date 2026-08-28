@@ -105,7 +105,7 @@ export default function App() {
 
       <main className="max-w-6xl mx-auto px-4 space-y-6">
         {/* KPI Cards */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
+        <div className="flex flex-wrap gap-3 justify-center md:justify-start">
           <div className="bg-white border border-slate-200 rounded-lg p-2 shadow-sm text-center">
             <span className="text-xs font-bold uppercase text-emerald-600 tracking-wider">Liberados</span>
             <div className="text-xl font-extrabold text-emerald-600 my-0">{liberados.length}</div>
@@ -207,7 +207,6 @@ export default function App() {
                   <tr className="border-b border-slate-200 text-slate-500 font-bold uppercase">
                     <th className="py-2 px-3">Prefixo</th>
                     <th className="py-2 px-3">Modelo</th>
-                    <th className="py-2 px-3">Diagnóstico</th>
                     <th className="py-2 px-3 text-right no-print">Ação</th>
                   </tr>
                 </thead>
@@ -220,7 +219,6 @@ export default function App() {
                         </span>
                       </td>
                       <td className="py-2 px-3 font-semibold text-slate-600">{v.modelo}</td>
-                      <td className="py-2 px-3 text-slate-800">{v.motivo || 'Em manutenção'}</td>
                       <td className="py-2 px-3 text-right no-print">
                         <button
                           onClick={() => setSelectedVehicle(v)}
@@ -255,7 +253,6 @@ export default function App() {
                   <tr className="border-b border-slate-200 text-slate-500 font-bold uppercase">
                     <th className="py-2 px-3">Prefixo</th>
                     <th className="py-2 px-3">Destino</th>
-                    <th className="py-2 px-3">Observação</th>
                     <th className="py-2 px-3 text-right no-print">Ação</th>
                   </tr>
                 </thead>
@@ -268,7 +265,6 @@ export default function App() {
                         </span>
                       </td>
                       <td className="py-2 px-3 font-semibold text-slate-800">{v.destino}</td>
-                      <td className="py-2 px-3 text-slate-600">{v.obs || '-'}</td>
                       <td className="py-2 px-3 text-right no-print">
                         <button
                           onClick={() => setSelectedVehicle(v)}
