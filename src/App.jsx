@@ -105,31 +105,31 @@ export default function App() {
 
       <main className="max-w-6xl mx-auto px-4 space-y-6">
         {/* KPI Cards */}
-        <div className="flex flex-wrap gap-3 justify-center md:justify-start">
-          <div className="bg-white border border-slate-200 rounded-lg p-2 shadow-sm text-center">
+        <div className="flex flex-wrap gap-6 justify-center md:justify-start">
+          <div className="bg-white border border-slate-200 rounded-lg px-3 py-1.5 shadow-sm text-center">
             <span className="text-xs font-bold uppercase text-emerald-600 tracking-wider">Liberados</span>
-            <div className="text-xl font-extrabold text-emerald-600 my-0">{liberados.length}</div>
-            <span className="text-xs font-semibold text-slate-500">{((liberados.length / 50) * 100).toFixed(0)}% da frota</span>
+            <div className="text-lg font-extrabold text-emerald-600 my-0">{liberados.length}</div>
+            <span className="text-xs font-semibold text-slate-500">{((liberados.length / 50) * 100).toFixed(0)}%</span>
           </div>
 
-          <div className="bg-white border border-slate-200 rounded-lg p-2 shadow-sm text-center">
+          <div className="bg-white border border-slate-200 rounded-lg px-3 py-1.5 shadow-sm text-center">
             <span className="text-xs font-bold uppercase text-red-600 tracking-wider">Oficina</span>
-            <div className="text-xl font-extrabold text-red-600 my-0">{oficina.length}</div>
-            <span className="text-xs font-semibold text-slate-500">{((oficina.length / 50) * 100).toFixed(0)}% da frota</span>
+            <div className="text-lg font-extrabold text-red-600 my-0">{oficina.length}</div>
+            <span className="text-xs font-semibold text-slate-500">{((oficina.length / 50) * 100).toFixed(0)}%</span>
           </div>
 
-          <div className="bg-white border border-slate-200 rounded-lg p-2 shadow-sm text-center">
+          <div className="bg-white border border-slate-200 rounded-lg px-3 py-1.5 shadow-sm text-center">
             <span className="text-xs font-bold uppercase text-amber-600 tracking-wider">Serv. Externo</span>
-            <div className="text-xl font-extrabold text-amber-600 my-0">
+            <div className="text-lg font-extrabold text-amber-600 my-0">
               {String(externo.length).padStart(2, '0')}
             </div>
-            <span className="text-xs font-semibold text-slate-500">{((externo.length / 50) * 100).toFixed(0)}% da frota</span>
+            <span className="text-xs font-semibold text-slate-500">{((externo.length / 50) * 100).toFixed(0)}%</span>
           </div>
 
-          <div className="bg-white border border-slate-200 rounded-lg p-2 shadow-sm text-center">
+          <div className="bg-white border border-slate-200 rounded-lg px-3 py-1.5 shadow-sm text-center">
             <span className="text-xs font-bold uppercase text-blue-900 tracking-wider">Frota Total</span>
-            <div className="text-xl font-extrabold text-blue-900 my-0">50</div>
-            <span className="text-xs font-semibold text-slate-500">Veículos cadastrados</span>
+            <div className="text-lg font-extrabold text-blue-900 my-0">50</div>
+            <span className="text-xs font-semibold text-slate-500">cadastrados</span>
           </div>
         </div>
 
