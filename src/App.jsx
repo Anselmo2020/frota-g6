@@ -260,7 +260,7 @@ export default function App() {
           <div className="bg-white border border-slate-200 rounded-2xl w-full max-w-sm p-6 shadow-2xl">
             <div className="flex justify-between items-start mb-4">
               <div>
-                <h3 className="text-xl font-extrabold text-brand-black">Prefixo {detailVehicle.prefixo}</h3>
+                <h3 className="text-xl font-extrabold text-brand-black">Prefixo 90{detailVehicle.prefixo}</h3>
                 <p className="text-sm text-slate-600 font-semibold">{detailVehicle.modelo}</p>
               </div>
               <button
