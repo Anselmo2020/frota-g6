@@ -1,9 +1,8 @@
-/* stylelint-disable-next-line at-rule-no-unknown */
+/* stylelint-disable at-rule-no-unknown */
 @tailwind base;
-/* stylelint-disable-next-line at-rule-no-unknown */
 @tailwind components;
-/* stylelint-disable-next-line at-rule-no-unknown */
 @tailwind utilities;
+/* stylelint-enable at-rule-no-unknown */
 
 body {
   background-color: #F8FAFC;
@@ -29,13 +28,12 @@ body {
   main {
     padding: 0 8px !important;
     gap: 8px !important;
-    space-y: 8px !important;
   }
 
   header {
     padding: 8px 8px !important;
     margin-bottom: 4px !important;
-    border-b-width: 2px !important;
+    border-bottom-width: 2px !important;
   }
 
   h1 {
