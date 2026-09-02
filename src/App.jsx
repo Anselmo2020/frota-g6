@@ -206,7 +206,11 @@ export default function App() {
             </div>
           </div>
 
+<<<<<<< HEAD
           {/* Serviço Externo */}
+=======
+          {/* Serviço Externo - Lista Vertical com Detalhes */}
+>>>>>>> 4338a0d (refactor: Change Serviço Externo section to table layout with visible details)
           <div className="bg-white border border-slate-200 rounded-xl p-5 shadow-sm">
             <div className="flex justify-between items-center border-b border-slate-100 pb-3 mb-3">
               <div className="flex items-center gap-2">
@@ -225,6 +229,10 @@ export default function App() {
                   <tr className="border-b border-slate-200 text-slate-500 font-bold uppercase">
                     <th className="py-2 px-3">Prefixo</th>
                     <th className="py-2 px-3">Destino</th>
+<<<<<<< HEAD
+=======
+                    <th className="py-2 px-3">Observação</th>
+>>>>>>> 4338a0d (refactor: Change Serviço Externo section to table layout with visible details)
                     <th className="py-2 px-3 text-right no-print">Ação</th>
                   </tr>
                 </thead>
@@ -237,10 +245,18 @@ export default function App() {
                         </span>
                       </td>
                       <td className="py-2 px-3 font-semibold text-slate-800">{v.destino}</td>
+<<<<<<< HEAD
                       <td className="py-2 px-3 text-right no-print">
                         <button
                           onClick={() => setSelectedVehicle(v)}
                           className="text-slate-400 hover:text-brand-black font-bold"
+=======
+                      <td className="py-2 px-3 text-slate-700">{v.obs}</td>
+                      <td className="py-2 px-3 text-right no-print">
+                        <button
+                          onClick={() => setSelectedVehicle(v)}
+                          className="text-slate-400 hover:text-brand-black font-bold transition"
+>>>>>>> 4338a0d (refactor: Change Serviço Externo section to table layout with visible details)
                         >
                           Editar
                         </button>
